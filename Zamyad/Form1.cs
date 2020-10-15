@@ -11,11 +11,11 @@ using System.Windows.Forms;
 namespace Zamyad
 {
 
-    public delegate void XHandler(object sender, System.EventArgs e); // 1st Step!
+    public delegate void XHandler(object sender, System.EventArgs e); // 1
     public partial class Form1 : Form
     {
 
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -25,21 +25,23 @@ namespace Zamyad
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             oStack.X += new XHandler(oStack_X); //5
         }
-        private static void oStack_X(object sender, System.EventArgs e) // 6th Step!
+
+        private static void oStack_X(object sender, System.EventArgs e) // 6th 
         {
             System.Windows.Forms.MessageBox.Show("Stack Over Flow");
         }
 
-       
+
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Convert.ToInt32(e.KeyChar) == 13)
             {
-                oStack.Amount = Convert.ToInt32(textBox1.Text);
+               int Temp = Convert.ToInt32(textBox1.Text);
+                oStack.Amount = Temp + oStack.Amount;
+                textBox1.Text = "";
             }
         }
     }

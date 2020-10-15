@@ -12,7 +12,7 @@ namespace Zamyad
         {
 
         }
-        private int _amount;
+        static  private int _amount;
 		public int Amount
 		{
 			get
