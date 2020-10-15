@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Zamyad
 {
 
-    public delegate void XHandler(object sender, System.EventArgs e); // 1
+    public delegate void XHandler(object sender, System.EventArgs e); //مرحله اول
     public partial class Form1 : Form
     {
 
@@ -25,10 +25,10 @@ namespace Zamyad
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            oStack.X += new XHandler(oStack_X); //5
+            oStack.X += new XHandler(oStack_X); //مرحله پنجم
         }
 
-        private static void oStack_X(object sender, System.EventArgs e) // 6th 
+        private static void oStack_X(object sender, System.EventArgs e) // مرحله ششم
         {
             System.Windows.Forms.MessageBox.Show("Stack Over Flow");
         }

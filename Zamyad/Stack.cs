@@ -23,13 +23,13 @@ namespace Zamyad
 			{
                 if (value>=30)
                 {
-					onX(new System.EventArgs()); //4
+					onX(new System.EventArgs()); //مرحله چهارم
 				}
 				_amount = value;
 			}
 		}
-		public event XHandler X; //2
-		virtual protected void onX(System.EventArgs e) //3
+		public event XHandler X; //مرحله دوم
+		virtual protected void onX(System.EventArgs e) //مرحله سوم
 		{
 			if (X != null)
 				X(this, e);
